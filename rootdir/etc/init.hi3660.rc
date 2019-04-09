@@ -33,10 +33,6 @@ service bfm-ctl /system/bin/bfm-ctl
     group system
     oneshot
 
-service aptouch /system/bin/true
-    disabled
-    oneshot
-
 service charger /sbin/chargeonlymode -p
     class charger
     user root
