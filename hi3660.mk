@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
+$(call inherit-product, vendor/huawei/hi3660-common/hi3660-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.kirin970.rc
+    init.hi3660.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -48,18 +48,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/fingerprint.kl:system/usr/keylayout/fingerprint.kl
 
+# LineageHw
+PRODUCT_PACKAGES += \
+    lineage.touch@1.0-service.hi3660
+
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     com.android.nfc_extras
-
-PRODUCT_COPY_FILES += \
-    device/generic/common/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
-
-# odm-init
-PRODUCT_PACKAGES += \
-    odm-init
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -77,6 +74,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     resize2fs_static
 
-# Shims
+# Trust HAL
 PRODUCT_PACKAGES += \
-    libshims_hwsmartdisplay_jni
+    lineage.trust@1.0-service

@@ -12,14 +12,19 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := hwsmartdisplay_jni.c
+LOCAL_SRC_FILES := init_hi3660.cpp
 
-LOCAL_MODULE := libshims_hwsmartdisplay_jni
+LOCAL_C_INCLUDES := system/core/init
+
+LOCAL_MODULE := libinit_hi3660
 LOCAL_MODULE_TAGS := optional
 
-include $(BUILD_SHARED_LIBRARY)
+LOCAL_STATIC_LIBRARIES := libbase
+
+include $(BUILD_STATIC_LIBRARY)
