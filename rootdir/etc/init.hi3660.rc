@@ -21,7 +21,7 @@ on post-fs-data
     start teecd
 
 on property:ro.rr.device=*
-    setprop qemu.hw.mainkeys 1
+    setprop qemu.hw.mainkeys 0
 
 on property:sys.user.0.ce_available=true
     mkdir /data/sec_storage_data 0700 system system
