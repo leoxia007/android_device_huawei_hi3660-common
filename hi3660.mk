@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
+$(call inherit-product, vendor/huawei/hi3660-common/hi3660-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.kirin970.rc
+    init.hi3660.rc
 
 # Display
 PRODUCT_PACKAGES += \
