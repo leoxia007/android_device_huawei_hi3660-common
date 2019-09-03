@@ -16,6 +16,8 @@
 
 VENDOR_PATH := device/huawei/hi3660-common
 
+BUILD_FINGERPRINT := HUAWEI/BLA-L29/HWBLA:8.0.0/HUAWEIBLA-L29S/137(C432):user/release-keys
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
